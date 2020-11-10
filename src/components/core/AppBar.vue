@@ -1,11 +1,6 @@
 <template>
     <div class="appbar">
-        <v-app-bar
-            class="menu"
-            absolute
-            color="transparent"
-            scroll-target="#scrolling-techniques-7"
-        >
+        <v-app-bar class="menu" absolute color="transparent">
             <v-btn icon small class="bgm" :ripple="false" id="no-background-hover">
                 <v-img :src="require('../../assets/bgmOn.png')"></v-img>
             </v-btn>
@@ -48,15 +43,16 @@ export default {
 <style lang="scss" scoped>
 header {
     position: fixed !important;
+    z-index: 100 !important;
 }
 .menu {
     padding: 0 60px;
     background: rgba(17, 17, 17, 0.75) !important;
 }
 .bgm {
-    margin-right: 100px;
+    margin-right: 80px;
     img {
-        width: 75%;
+        // width: 100%;
     }
 }
 .logo {
@@ -65,6 +61,10 @@ header {
 }
 #no-background-hover::before {
     background-color: transparent !important;
+}
+.logIn {
+    font-size: 16px;
+    padding: 0 !important;
 }
 .logIn-left-margin {
     margin-left: 16px;

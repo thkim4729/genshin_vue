@@ -1,33 +1,23 @@
 <template>
     <div class="main">
-        <!-- <v-img
-            :src="require('../assets/Genshin.jpg')"
-            contain
-            aspect-ratio="1.7"
-            class="genshin"
-        ></v-img> -->
-        <video
-            class="video"
-            src="../assets/Genshin.mp4"
-            autoplay
-            loop
-            muted
-            poster="../assets/Genshin.jpg"
-        ></video>
+        <visual class="visual"></visual>
+        <news class="news"></news>
     </div>
 </template>
 
 <script>
 export default {
     name: 'Main',
+    components: {
+        Visual: () => import('@/components/main/MainVisual.vue'),
+        News: () => import('@/components/main/MainNews.vue'),
+    },
 };
 </script>
 
 <style lang="scss" scoped>
-main {
+.visual {
+    // width: 100%;
     // height: 100vh;
-}
-video {
-    width: 100%;
 }
 </style>
