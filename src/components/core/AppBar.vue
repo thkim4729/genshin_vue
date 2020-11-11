@@ -1,8 +1,27 @@
 <template>
     <div class="appbar">
         <v-app-bar class="menu" absolute color="transparent">
-            <v-btn icon small class="bgm" :ripple="false" id="no-background-hover">
+            <v-btn
+                icon
+                small
+                class="bgm-btn"
+                :ripple="false"
+                id="no-background-hover"
+                v-if="!showIcon"
+                @click="isShowIcon"
+            >
                 <v-img :src="require('../../assets/bgmOn.png')"></v-img>
+            </v-btn>
+            <v-btn
+                icon
+                small
+                class="bgm-btn"
+                :ripple="false"
+                id="no-background-hover"
+                v-else
+                @click="isShowIcon"
+            >
+                <v-img :src="require('../../assets/bgmOff.png')"></v-img>
             </v-btn>
 
             <router-link to="/">
@@ -32,9 +51,17 @@
 <script>
 export default {
     name: 'AppBar',
+    data() {
+        return {
+            showIcon: false,
+        };
+    },
     methods: {
         reload() {
             location.reload();
+        },
+        isShowIcon() {
+            this.showIcon = !this.showIcon;
         },
     },
 };
@@ -49,7 +76,7 @@ header {
     padding: 0 60px;
     background: rgba(17, 17, 17, 0.75) !important;
 }
-.bgm {
+.bgm-btn {
     margin-right: 80px;
     img {
         // width: 100%;
@@ -63,8 +90,13 @@ header {
     background-color: transparent !important;
 }
 .logIn {
+    filter: brightness(75%);
+    transition: all 0.2s;
     font-size: 16px;
     padding: 0 !important;
+}
+.logIn:hover {
+    filter: none;
 }
 .logIn-left-margin {
     margin-left: 16px;

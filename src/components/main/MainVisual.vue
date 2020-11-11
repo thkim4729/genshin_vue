@@ -20,16 +20,15 @@ export default {
     height: 100vh;
     video {
         position: absolute;
-        min-width: 100%;
-        height: 115%;
-        object-fit: contain;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        // min-width: 100%;
+        // height: 115%;
+        // object-fit: contain;
     }
-}
-.logo-box {
-    position: absolute;
-    z-index: 50;
-    width: 300px;
-    right: 5%;
-    bottom: 5%;
 }
 </style>
