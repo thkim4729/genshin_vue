@@ -8,9 +8,9 @@
                 :ripple="false"
                 id="no-background-hover"
                 v-if="!showIcon"
-                @click="isShowIcon"
+                @click="playMusic"
             >
-                <v-img :src="require('../../assets/bgmOn.png')"></v-img>
+                <v-img :src="require('../../assets/bgmOff.png')"></v-img>
             </v-btn>
             <v-btn
                 icon
@@ -19,9 +19,9 @@
                 :ripple="false"
                 id="no-background-hover"
                 v-else
-                @click="isShowIcon"
+                @click="stopMusic"
             >
-                <v-img :src="require('../../assets/bgmOff.png')"></v-img>
+                <v-img :src="require('../../assets/bgmOn.png')"></v-img>
             </v-btn>
 
             <router-link to="/">
@@ -54,14 +54,25 @@ export default {
     data() {
         return {
             showIcon: false,
+            music: {},
         };
+    },
+    mounted() {
+        this.music = new Audio('https://genshin.mihoyo.com/_nuxt/medias/video-bgm.d8637316.mp3');
+        this.music.pause();
+        this.music.currentTime = 0;
     },
     methods: {
         reload() {
             location.reload();
         },
-        isShowIcon() {
-            this.showIcon = !this.showIcon;
+        stopMusic() {
+            this.showIcon = false;
+            this.music.pause();
+        },
+        playMusic() {
+            this.showIcon = true;
+            this.music.play();
         },
     },
 };

@@ -27,7 +27,9 @@ export default {
 html {
     scroll-behavior: smooth;
 }
-a {
+a,
+ul,
+li {
     text-decoration: none;
 }
 * {
@@ -58,6 +60,5 @@ a {
 }
 ::-webkit-scrollbar-corner {
     /*  상하+좌우 스크롤이 만나는 공간   */
-    background-color: red;
 }
 </style>
