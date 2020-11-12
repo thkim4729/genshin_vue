@@ -58,9 +58,11 @@ export default {
         };
     },
     mounted() {
-        this.music = new Audio('https://genshin.mihoyo.com/_nuxt/medias/video-bgm.d8637316.mp3');
+        // this.music = new Audio('https://genshin.mihoyo.com/_nuxt/medias/video-bgm.d8637316.mp3');
+        this.music = new Audio(require('@/assets/BGM.mp3'));
         this.music.pause();
         this.music.currentTime = 0;
+        this.music.loop = true;
     },
     methods: {
         reload() {
@@ -89,13 +91,20 @@ header {
 }
 .bgm-btn {
     margin-right: 80px;
-    img {
-        // width: 100%;
-    }
+    filter: brightness(75%);
+    transition: all 0.2s;
+}
+.bgm-btn:hover {
+    filter: none;
 }
 .logo {
     // margin-left: 50px;
     width: 0;
+    filter: brightness(85%);
+    transition: all 0.2s;
+}
+.logo:hover {
+    filter: none;
 }
 #no-background-hover::before {
     background-color: transparent !important;

@@ -36,6 +36,7 @@ li {
     margin: 0;
     padding: 0;
     font-family: 'NEXON Lv1 Gothic Light', sans-serif;
+    vertical-align: middle;
 }
 
 ::-webkit-scrollbar {
