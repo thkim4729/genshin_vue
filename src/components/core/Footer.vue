@@ -34,10 +34,10 @@
             <v-row class="footer-bottom" justify="center" align="center" no-gutters>
                 <v-row class="footer-left" align="center" no-gutters>
                     <div class="mihoyo-logo">
-                        <img src="@/assets/mihoyo.png" alt="미호요로고" />
+                        <img src="@/assets/img/mihoyo.png" alt="미호요로고" />
                     </div>
                     <div class="genshin-logo">
-                        <img src="@/assets/logo.png" alt="원신로고" />
+                        <img src="@/assets/img/logo.png" alt="원신로고" />
                     </div>
                 </v-row>
                 <v-row class="footer-right" align="center" no-gutters>
@@ -55,7 +55,7 @@
                         trademarks of Sony Interactive Entertainment Inc.
                     </div>
                     <div class="content-icon">
-                        <img src="@/assets/content-icon.png" alt="" />
+                        <img src="@/assets/img/content-icon.png" alt="" />
                     </div>
                 </v-row>
             </v-row>
@@ -98,6 +98,7 @@ export default {
     .icon {
         filter: brightness(50%);
         transition: all 0.2s;
+        font-size: 16px;
     }
     .icon:hover {
         filter: none;

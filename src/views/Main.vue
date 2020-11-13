@@ -3,10 +3,11 @@
         <main-visual class="visual"></main-visual>
         <main-news class="news"></main-news>
         <main-character class="character"></main-character>
+        <main-city></main-city>
 
         <div id="top" data-aos="fade-in">
             <v-btn fab dark small color="primary" @click="scrollToTop()">
-                <v-icon>mdi-chevron-up</v-icon>
+                <v-icon class="to-top">mdi-chevron-up</v-icon>
             </v-btn>
         </div>
     </div>
@@ -19,6 +20,7 @@ export default {
         MainVisual: () => import('@/components/main/MainVisual.vue'),
         MainNews: () => import('@/components/main/MainNews.vue'),
         MainCharacter: () => import('@/components/main/MainCharacter.vue'),
+        MainCity: () => import('@/components/main/MainCity.vue'),
     },
     methods: {
         scrollToTop() {

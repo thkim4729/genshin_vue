@@ -10,7 +10,7 @@
                 v-if="!showIcon"
                 @click="playMusic"
             >
-                <v-img :src="require('../../assets/bgmOff.png')"></v-img>
+                <v-img :src="require('../../assets/img/bgmOff.png')"></v-img>
             </v-btn>
             <v-btn
                 icon
@@ -21,7 +21,7 @@
                 v-else
                 @click="stopMusic"
             >
-                <v-img :src="require('../../assets/bgmOn.png')"></v-img>
+                <v-img :src="require('../../assets/img/bgmOn.png')"></v-img>
             </v-btn>
 
             <router-link to="/">
@@ -34,9 +34,11 @@
                     :ripple="false"
                     id="no-background-hover"
                 >
-                    <v-img :src="require('../../assets/logo.png')"></v-img>
+                    <v-img :src="require('../../assets/img/logo.png')"></v-img>
                 </v-btn>
             </router-link>
+
+            <app-bar-list></app-bar-list>
 
             <v-spacer></v-spacer>
 
@@ -51,6 +53,7 @@
 <script>
 export default {
     name: 'AppBar',
+    components: { AppBarList: () => import('@/components/core/AppBarList.vue') },
     data() {
         return {
             showIcon: false,
@@ -59,7 +62,7 @@ export default {
     },
     mounted() {
         // this.music = new Audio('https://genshin.mihoyo.com/_nuxt/medias/video-bgm.d8637316.mp3');
-        this.music = new Audio(require('@/assets/BGM.mp3'));
+        this.music = new Audio(require('@/assets/music/BGM.mp3'));
         this.music.pause();
         this.music.currentTime = 0;
         this.music.loop = true;
@@ -91,7 +94,7 @@ header {
 }
 .bgm-btn {
     margin-right: 80px;
-    filter: brightness(75%);
+    filter: brightness(80%);
     transition: all 0.2s;
 }
 .bgm-btn:hover {
@@ -100,8 +103,9 @@ header {
 .logo {
     // margin-left: 50px;
     width: 0;
-    filter: brightness(85%);
+    filter: brightness(90%);
     transition: all 0.2s;
+    margin-right: 100px;
 }
 .logo:hover {
     filter: none;
@@ -110,7 +114,7 @@ header {
     background-color: transparent !important;
 }
 .logIn {
-    filter: brightness(75%);
+    filter: brightness(80%);
     transition: all 0.2s;
     font-size: 16px;
     padding: 0 !important;
