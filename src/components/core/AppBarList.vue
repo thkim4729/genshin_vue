@@ -5,7 +5,7 @@
             <a href="#">소식</a>
             <a href="#">캐릭터</a>
 
-            <v-menu open-on-hover offset-y position-x="" tile min-width="200px">
+            <v-menu open-on-hover offset-y tile min-width="200px">
                 <template v-slot:activator="{ on, attrs }">
                     <a href="#" v-bind="attrs" v-on="on"
                         >정보<v-icon dark style="vertical-align:middle">mdi-menu-down</v-icon></a
