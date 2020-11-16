@@ -5,8 +5,10 @@ import store from './store';
 import vuetify from './plugins/vuetify';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+import 'swiper/swiper-bundle.css';
 Vue.config.productionTip = false;
+Vue.use(VueAwesomeSwiper /* { default options with global component } */);
 
 new Vue({
     created() {
