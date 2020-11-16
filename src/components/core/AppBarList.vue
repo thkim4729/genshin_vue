@@ -1,9 +1,9 @@
 <template>
     <div class="appbar-list">
         <v-row class="list-wrap" no-gutters justify="center" align="center">
-            <a href="#">홈</a>
+            <router-link to="/">홈</router-link>
             <a href="#">소식</a>
-            <a href="#">캐릭터</a>
+            <router-link to="/Character">캐릭터</router-link>
 
             <v-menu open-on-hover offset-y tile min-width="200px">
                 <template v-slot:activator="{ on, attrs }">

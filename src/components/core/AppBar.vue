@@ -1,6 +1,6 @@
 <template>
     <div class="appbar">
-        <v-app-bar class="menu" absolute color="transparent">
+        <v-app-bar class="menu" absolute dense height="66px">
             <v-btn
                 icon
                 small
@@ -10,7 +10,7 @@
                 v-if="!showIcon"
                 @click="playMusic"
             >
-                <v-img :src="require('../../assets/img/bgmOff.png')"></v-img>
+                <v-img :src="require('../../assets/img/appbar/bgmOff.png')"></v-img>
             </v-btn>
             <v-btn
                 icon
@@ -21,7 +21,7 @@
                 v-else
                 @click="stopMusic"
             >
-                <v-img :src="require('../../assets/img/bgmOn.png')"></v-img>
+                <v-img :src="require('../../assets/img/appbar/bgmOn.png')"></v-img>
             </v-btn>
 
             <router-link to="/">
@@ -34,7 +34,7 @@
                     :ripple="false"
                     id="no-background-hover"
                 >
-                    <v-img :src="require('../../assets/img/logo.png')"></v-img>
+                    <v-img :src="require('../../assets/img/appbar/logo.png')"></v-img>
                 </v-btn>
             </router-link>
 
@@ -46,6 +46,10 @@
                 로그인
                 <v-icon class="logIn-left-margin" large>mdi-account-circle</v-icon>
             </v-btn>
+
+            <a href="#" class="download">
+                다운로드
+            </a>
         </v-app-bar>
     </div>
 </template>
@@ -83,14 +87,17 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 header {
     position: fixed !important;
     z-index: 100 !important;
 }
 .menu {
-    padding: 0 60px;
+    padding: 0 0 0 100px;
     background: rgba(17, 17, 17, 0.75) !important;
+}
+.v-toolbar__content {
+    padding: 0 !important;
 }
 .bgm-btn {
     margin-right: 80px;
@@ -116,13 +123,29 @@ header {
 .logIn {
     filter: brightness(80%);
     transition: all 0.2s;
-    font-size: 16px;
+    font-size: 16px !important;
     padding: 0 !important;
+    margin-right: 16px;
 }
 .logIn:hover {
     filter: none;
 }
 .logIn-left-margin {
     margin-left: 16px;
+}
+.download {
+    width: 200px;
+    height: 100%;
+    font-size: 20px;
+    background: #ffcf0d;
+    text-align: center;
+    color: #111 !important;
+    font-weight: 500;
+    line-height: 66px;
+    transition: all 0.2s;
+}
+.download:hover {
+    background: rgba(17, 17, 17, 0.75) !important;
+    color: #ffcf0d !important;
 }
 </style>
