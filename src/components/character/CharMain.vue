@@ -1,97 +1,48 @@
 <template>
     <div class="char-main">
-        <!-- <div class="char-info swiper-container">
-            <ul class=" swiper-wrapper">
-                <li class="swiper-slide" v-for="(char, i) in chars" :key="i">
+        <div class="char-info ">
+            <ul class="info-slider ">
+                <li v-for="(char, i) in chars" :key="i">
                     <img class="info-person" :src="char.img" :alt="char.name" />
                     <img
                         class="info-icon"
                         src="@/assets/img/character/character_pattern.png"
                         alt="icon"
                     />
-                    <h2>hi</h2>
                 </li>
             </ul>
-            <div class="char-page swiper-pagination">
+            <div class="char-page">
                 <ul class="page-slider">
                     <li></li>
                 </ul>
-            </div>
-        </div> -->
-        <div class="char-info swiper-container">
-            <div class="info-slider swiper-wrapper">
-                <!-- Lazy image -->
-                <div class="swiper-slide">
-                    <img
-                        data-src="https://uploadstatic-sea.mihoyo.com/contentweb/20200616/2020061611274052455.png"
-                        class="swiper-lazy"
-                    />
-                    <div class="swiper-lazy-preloader"></div>
-                </div>
-
-                <!-- Lazy image with srscet-->
-                <div class="swiper-slide">
-                    <img
-                        data-src="@/assets/img/character/Amber.png"
-                        data-srcset="path/logo/logo-large.png 2x"
-                        class="swiper-lazy"
-                    />
-                    <div class="swiper-lazy-preloader"></div>
-                </div>
-
-                <!-- Element with lazy background image -->
-                <div class="swiper-slide">
-                    <div data-background="@/assets/img/character/Lisa.png" class="swiper-lazy">
-                        <div class="swiper-lazy-preloader"></div>
-                    </div>
-                </div>
-
-                <!-- Lazy background image on slide itself -->
-                <div
-                    data-background="@/assets/img/character/Jean.png"
-                    class="swiper-slide swiper-lazy"
-                >
-                    <div class="swiper-lazy-preloader"></div>
-                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import Swiper from 'swiper';
-import 'swiper/swiper-bundle.css';
 export default {
     name: 'CharMain',
     data() {
         return {
             chars: [
                 {
-                    img: require('@/assets/img/character/Jean.png'),
+                    img: require('../../assets/img/character/Jean.png'),
                     name: 'Jean',
                 },
                 {
-                    img: require('@/assets/img/character/Amber.png'),
+                    img: require('../../assets/img/character/Amber.png'),
                     name: 'Amber',
                 },
                 {
-                    img: require('@/assets/img/character/Lisa.png'),
+                    img: require('../../assets/img/character/Lisa.png'),
                     name: 'Lisa',
                 },
             ],
         };
     },
     methods: {},
-    mounted() {
-        new Swiper('.swiper-container', {
-            speed: 400,
-            spaceBetween: 100,
-            // Disable preloading of all images
-            preloadImages: false,
-            // Enable lazy loading
-            lazy: true,
-        });
-    },
+    mounted() {},
 };
 </script>
 
@@ -99,11 +50,6 @@ export default {
 ul,
 li {
     list-style: none;
-}
-.swiper-container {
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
 }
 .char-main {
     position: relative;

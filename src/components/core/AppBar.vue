@@ -29,7 +29,6 @@
                     @click="reload"
                     text
                     small
-                    flat
                     class="logo"
                     :ripple="false"
                     id="no-background-hover"

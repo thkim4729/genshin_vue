@@ -1,5 +1,5 @@
 <template>
-    <div class="view">
+    <div class="core-view">
         <transition name="component-fade" mode="out-in">
             <router-view></router-view>
         </transition>
@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    name: 'View',
+    name: 'CoreView',
 };
 </script>
 
