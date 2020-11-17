@@ -1,58 +1,74 @@
 <template>
     <div class="char-main">
-        <!-- <div class="char-info ">
-            <ul class="info-slider ">
-                <li v-for="(char, i) in chars" :key="i">
-                    <img class="info-person" :src="char.img" :alt="char.name" />
-                    <img
-                        class="info-icon"
-                        src="@/assets/img/character/character_pattern.png"
-                        alt="icon"
-                    />
-                </li>
-            </ul>
-            <div class="char-page">
-                <ul class="page-slider">
-                    <li></li>
-                </ul>
-            </div>
-        </div> -->
-        <swiper ref="mySwiper" :options="swiperOptions">
-            <swiper-slide>Slide 1</swiper-slide>
-            <swiper-slide>Slide 2</swiper-slide>
-            <swiper-slide>Slide 3</swiper-slide>
-            <swiper-slide>Slide 4</swiper-slide>
-            <swiper-slide>Slide 5</swiper-slide>
-            <div class="swiper-pagination" slot="pagination"></div>
-        </swiper>
+        <div class="char-info">
+            <swiper
+                class="info-slider"
+                ref="mySwiper"
+                :options="swiperOptions"
+                :auto-update="true"
+                :auto-destroy="true"
+                :delete-instance-on-destroy="true"
+                :cleanup-styles-on-destroy="true"
+            >
+                <swiper-slide class="slider-box" v-for="(char, i) in chars" :key="i"
+                    ><img class="info-person" :src="char.img" :alt="char.name" />
+                    <img class="info-icon" :src="char.icon" :alt="char.name" />
+                </swiper-slide>
+                <div class="swiper-pagination char-page" slot="pagination">
+                    <div class="page-box">
+                        <div class="char-list"></div>
+                        <div class="swiper-button-prev" slot="button-prev"></div>
+                        <div class="swiper-button-next" slot="button-next"></div>
+                    </div>
+                </div>
+            </swiper>
+        </div>
     </div>
 </template>
 
 <script>
-import 'swiper/swiper-bundle.css';
 export default {
     name: 'CharMain',
+    components: {
+        Swiper,
+        SwiperSlide,
+    },
+    directives: {
+        swiper: directive,
+    },
     data() {
         return {
             chars: [
                 {
                     img: require('../../assets/img/character/Jean.png'),
+                    icon: require('../../assets/img/character/Jean_icon.png'),
                     name: 'Jean',
                 },
                 {
                     img: require('../../assets/img/character/Amber.png'),
+                    icon: require('../../assets/img/character/Amber_icon.png'),
                     name: 'Amber',
                 },
                 {
                     img: require('../../assets/img/character/Lisa.png'),
+                    icon: require('../../assets/img/character/Lisa_icon.png'),
                     name: 'Lisa',
                 },
             ],
             swiperOptions: {
+                slidesPerView: 1,
+                spaceBetween: 1000,
+                loop: true,
+                centeredSlides: true,
                 pagination: {
                     el: '.swiper-pagination',
+                    type: 'bullets',
+                    clickable: true,
                 },
-                // Some Swiper option/callback...
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
             },
         };
     },
@@ -78,7 +94,7 @@ li {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url('../../assets/img/character/character_pattern2.png') no-repeat;
+    background: url('../../assets/img/character/character_pattern1.png') no-repeat;
     background-position: center bottom;
     background-size: auto 100vh;
 }
@@ -95,7 +111,7 @@ li {
         display: flex;
         -webkit-box-sizing: content-box;
         box-sizing: content-box;
-        li {
+        .slider-box {
             width: 100%;
             opacity: 1;
             transform: translate3d(0px, 0px, 0px);
@@ -118,7 +134,7 @@ li {
                 opacity: 0.1;
             }
         }
-        li::after {
+        .slider-box::after {
             position: absolute;
             z-index: 3;
             bottom: 0;
@@ -127,9 +143,69 @@ li {
             content: '';
             width: 154vh;
             height: 52vh;
-            background: url('../../assets/img/character/character_pattern3.png') center no-repeat;
+            background: url('../../assets/img/character/character_pattern2.png') center no-repeat;
             background-size: 154vh 52vh;
         }
     }
+}
+.char-page {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 300;
+    left: 0;
+    bottom: 0;
+    padding-top: 22px;
+    width: 100%;
+    height: 190px;
+    background: rgba(204, 204, 204, 0.2);
+    user-select: none;
+    .page-box {
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+        z-index: 1;
+        width: 900px;
+        height: 100%;
+        margin: 0 !important;
+        .char-list {
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            align-items: center;
+            transform: translate3d(0px, 0px, 0px);
+            transition-duration: 0ms;
+        }
+    }
+}
+.char-page::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 156px;
+    background: url('../../assets/img/character/character_pattern3.png') center bottom repeat
+        no-repeat;
+}
+.swiper-button-prev {
+    width: 45px;
+    height: 64px;
+    background: url('../../assets/img/character/prev.png') center no-repeat;
+    transform: translateY(-50%);
+}
+.swiper-button-prev::after {
+    content: '';
+}
+.swiper-button-next {
+    width: 45px;
+    height: 64px;
+    background: url('../../assets/img/character/next.png') center no-repeat;
+    transform: translateY(-50%);
+}
+.swiper-button-next::after {
+    content: '';
 }
 </style>

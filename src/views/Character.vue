@@ -10,7 +10,7 @@
 export default {
     name: 'Character',
     components: {
-        CharMain: () => import('@/components/character/CharMain.vue'),
+        CharMain: () => import('@/components/character/CharMain2.vue'),
     },
 };
 </script>
