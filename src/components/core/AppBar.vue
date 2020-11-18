@@ -124,7 +124,7 @@ header {
     transition: all 0.2s;
     font-size: 16px !important;
     padding: 0 !important;
-    margin-right: 16px;
+    margin-right: 30px;
 }
 .logIn:hover {
     filter: none;

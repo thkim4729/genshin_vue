@@ -2,15 +2,19 @@
     <div class="character">
         <div class="char-bg char-bg1"></div>
         <div class="char-bg char-bg2"></div>
-        <char-main></char-main>
+        <char-main :charsMondstadt="charsMondstadt"></char-main>
     </div>
 </template>
 
 <script>
+import { mapState } from 'vuex';
 export default {
     name: 'Character',
     components: {
         CharMain: () => import('@/components/character/CharMain.vue'),
+    },
+    computed: {
+        ...mapState(['charsMondstadt']),
     },
 };
 </script>
