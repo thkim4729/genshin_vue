@@ -18,6 +18,10 @@ const routes = [
                 path: '/Character',
                 component: () => import('../views/Character.vue'),
             },
+            {
+                path: '/Coupon',
+                component: () => import('../views/Coupon.vue'),
+            },
         ],
     },
 ];

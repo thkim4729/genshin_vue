@@ -20,9 +20,11 @@
                 </v-list>
             </v-menu>
 
-            <a href="#">포럼</a>
-            <a href="#">상점</a>
-            <a href="#">쿠폰교환</a>
+            <a href="https://forums.mihoyo.com/genshin/" target="_blank">포럼</a>
+            <a href="https://webstatic-sea.mihoyo.com/payment/genshin/index.html#/" target="_blank"
+                >상점</a
+            >
+            <router-link to="/Coupon">쿠폰교환</router-link>
         </v-row>
     </div>
 </template>

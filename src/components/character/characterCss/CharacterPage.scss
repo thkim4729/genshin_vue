@@ -75,10 +75,10 @@
     }
 }
 .character-page-item:hover p,
-.character-page-item:focus p {
+.character-page-item:focus-within p {
     color: #121212;
 }
 .character-page-item:hover,
-.character-page-item:focus {
+.character-page-item:focus-within {
     background-position: center -132px;
 }

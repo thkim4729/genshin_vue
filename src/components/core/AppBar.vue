@@ -41,7 +41,15 @@
 
             <v-spacer></v-spacer>
 
-            <v-btn class="logIn" text small dark :ripple="false" id="no-background-hover">
+            <v-btn
+                class="logIn"
+                text
+                small
+                dark
+                :ripple="false"
+                id="no-background-hover"
+                @click="openLogIn"
+            >
                 로그인
                 <v-icon class="logIn-left-margin" large>mdi-account-circle</v-icon>
             </v-btn>
@@ -72,7 +80,9 @@ export default {
     },
     methods: {
         reload() {
-            location.reload();
+            setTimeout(() => {
+                location.reload(true);
+            }, 100);
         },
         stopMusic() {
             this.showIcon = false;
@@ -82,6 +92,9 @@ export default {
             this.showIcon = true;
             this.music.play();
         },
+        openLogIn() {
+            this.$store.commit('toggleLogIn');
+        },
     },
 };
 </script>
@@ -89,7 +102,7 @@ export default {
 <style lang="scss">
 header {
     position: fixed !important;
-    z-index: 100 !important;
+    z-index: 5 !important;
 }
 .menu {
     padding: 0 0 0 100px;

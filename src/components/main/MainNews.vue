@@ -99,7 +99,7 @@ export default {
     position: relative;
     width: 100%;
     height: 100vh;
-    z-index: 50;
+    z-index: 1;
     img {
         position: absolute;
         top: 0;

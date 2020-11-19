@@ -1,4 +1,5 @@
 export default {
+    isLogIn: false,
     charsMondstadt: [
         {
             img: require('../assets/img/character/Mondstadt/Jean.png'),
@@ -166,4 +167,32 @@ export default {
             word: require('../assets/img/character/Mondstadt/Diona_word.png'),
         },
     ],
+    newsReco: [
+        {
+            link: '#',
+            img: require('../assets/img/news/recommend01.png'),
+            alt: '추천 01',
+            title: '<원신>과 중국 계림의 오프라인 콜라보 오픈!',
+            text: '계림의 아름다운 풍경을 함께 감상해봐요!',
+            date: '2020-11-18T07:45:57.290Z',
+        },
+        {
+            link: '#',
+            img: require('../assets/img/news/recommend02.png'),
+            alt: '추천 02',
+            title: '여행자의 현악 - <원신> 리월 음악 비하인드',
+            text: '',
+            date: '2020-11-16T07:45:57.290Z',
+        },
+        {
+            link: '#',
+            img: require('../assets/img/news/recommend03.png'),
+            alt: '추천 03',
+            title: '「돌아오지 않는 꺼진 별」 이벤트 설명',
+            text:
+                '어느 날 하늘에서 갑자기 떨어진 기이한 운석은 티바트 대륙에 희귀한 수면병을 몰고 왔다. 잠에 빠진 사람들, 신비한 꿈, 미지의 별…. 위기가 닥쳐오고 있다!',
+            date: '2020-11-16T07:45:57.290Z',
+        },
+    ],
+    couponForm: [{}],
 };

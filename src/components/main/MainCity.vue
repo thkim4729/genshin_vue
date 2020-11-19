@@ -83,7 +83,7 @@ export default {
         a {
             display: inline-block;
             position: relative;
-            z-index: 3;
+            z-index: 2;
             font-size: 36px;
             color: #fff;
             line-height: 260px;

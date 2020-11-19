@@ -1,5 +1,5 @@
 <template>
-    <div class="character-main">
+    <div class="character-intro">
         <div class="character-visual">
             <agile
                 class="character-visual-list"
@@ -147,7 +147,7 @@ ul,
 li {
     list-style: none;
 }
-.character-main {
+.character-intro {
     position: relative;
     width: 100%;
     height: 100vh;

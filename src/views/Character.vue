@@ -2,7 +2,7 @@
     <div class="character">
         <div class="char-bg char-bg1"></div>
         <div class="char-bg char-bg2"></div>
-        <char-main :charsMondstadt="charsMondstadt"></char-main>
+        <character-intro :charsMondstadt="charsMondstadt"></character-intro>
     </div>
 </template>
 
@@ -11,7 +11,7 @@ import { mapState } from 'vuex';
 export default {
     name: 'Character',
     components: {
-        CharMain: () => import('@/components/character/CharMain.vue'),
+        CharacterIntro: () => import('@/components/character/CharacterIntro.vue'),
     },
     computed: {
         ...mapState(['charsMondstadt']),
@@ -46,5 +46,30 @@ export default {
     background: url('../assets/img/characterBg02.jpg') no-repeat;
     animation: bg-change 15s infinite linear, breath 80s infinite linear;
     opacity: 0;
+}
+@keyframes breath {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes bg-change {
+    48% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    98% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 </style>

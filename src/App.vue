@@ -33,6 +33,9 @@ li {
     text-decoration: none;
     list-style: none;
 }
+a {
+    color: #111;
+}
 * {
     margin: 0;
     padding: 0;
