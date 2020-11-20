@@ -22,11 +22,30 @@
                     </v-icon>
                 </v-btn>
                 <v-spacer></v-spacer>
-                <v-btn large text :ripple="false" id="no-background-hover" class="icon">
-                    <v-icon size="24px" class="mx-4">mdi-earth</v-icon>
-                    한국어
-                    <v-icon size="24px" class="ml-4">mdi-menu-down</v-icon>
-                </v-btn>
+
+                <v-menu top :offset-y="true">
+                    <template v-slot:activator="{ on, attrs }">
+                        <v-btn
+                            large
+                            text
+                            :ripple="false"
+                            id="no-background-hover"
+                            class="icon"
+                            v-bind="attrs"
+                            v-on="on"
+                        >
+                            <v-icon size="24px" class="mx-4">mdi-earth</v-icon>
+                            한국어
+                            <v-icon size="24px" class="ml-4">mdi-menu-down</v-icon>
+                        </v-btn>
+                    </template>
+
+                    <v-list class="lang-list">
+                        <v-list-item v-for="(item, index) in items" :key="index">
+                            <v-list-item-title>{{ item.title }}</v-list-item-title>
+                        </v-list-item>
+                    </v-list>
+                </v-menu>
             </v-row>
 
             <v-divider></v-divider>
@@ -55,7 +74,7 @@
                         trademarks of Sony Interactive Entertainment Inc.
                     </div>
                     <div class="content-icon">
-                        <img src="@/assets/img/footer/content-icon.png" alt="" />
+                        <img src="@/assets/img/footer/content-icon.png" alt="게임 등급" />
                     </div>
                 </v-row>
             </v-row>
@@ -76,6 +95,12 @@ export default {
                 'mdi-alpha-n-circle',
                 'mdi-discord',
                 'mdi-reddit',
+            ],
+            items: [
+                { title: 'Click Me' },
+                { title: 'Click Me' },
+                { title: 'Click Me' },
+                { title: 'Click Me 2' },
             ],
         };
     },
@@ -103,6 +128,8 @@ export default {
     .icon:hover {
         filter: none;
     }
+}
+.lang-list {
 }
 .footer-bottom {
     // width: 1200px;

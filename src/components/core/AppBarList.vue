@@ -3,7 +3,7 @@
         <v-row class="list-wrap" no-gutters justify="center" align="center">
             <router-link to="/">홈</router-link>
             <a href="#">소식</a>
-            <router-link to="/Character">캐릭터</router-link>
+            <router-link to="/Character" @click="reload">캐릭터</router-link>
 
             <v-menu open-on-hover offset-y tile min-width="200px">
                 <template v-slot:activator="{ on, attrs }">
@@ -24,12 +24,12 @@
             <a href="https://webstatic-sea.mihoyo.com/payment/genshin/index.html#/" target="_blank"
                 >상점</a
             >
-            <router-link to="/Coupon">쿠폰교환</router-link>
+            <router-link to="/Coupon" @click="reload">쿠폰교환</router-link>
         </v-row>
     </div>
 </template>
 
-<script>
+<script defer>
 export default {
     name: 'AppBarList',
     data() {
@@ -41,6 +41,13 @@ export default {
                 { link: '#', title: '만화' },
             ],
         };
+    },
+    methods: {
+        reload() {
+            setTimeout(() => {
+                location.reload(true);
+            }, 100);
+        },
     },
 };
 </script>

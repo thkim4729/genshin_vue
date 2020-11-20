@@ -54,14 +54,14 @@
                 <v-icon class="logIn-left-margin" large>mdi-account-circle</v-icon>
             </v-btn>
 
-            <a href="#" class="download">
-                다운로드
+            <a href="#" class="download btn effect01">
+                <span>다운로드</span>
             </a>
         </v-app-bar>
     </div>
 </template>
 
-<script>
+<script defer>
 export default {
     name: 'AppBar',
     components: { AppBarList: () => import('@/components/core/AppBarList.vue') },
@@ -145,19 +145,90 @@ header {
 .logIn-left-margin {
     margin-left: 16px;
 }
-.download {
-    width: 200px;
-    height: 100%;
+// .download {
+//     width: 200px;
+//     height: 100%;
+//     font-size: 20px;
+//     background: #ffcf0d;
+//     text-align: center;
+//     color: #111 !important;
+//     font-weight: 500;
+//     line-height: 66px;
+//     transition: all 0.2s;
+// }
+// .download:hover {
+//     background: rgba(17, 17, 17, 0.75) !important;
+//     color: #ffcf0d !important;
+// }
+
+.btn {
+    letter-spacing: 0.1em;
+    cursor: pointer;
     font-size: 20px;
-    background: #ffcf0d;
-    text-align: center;
+    font-weight: 400;
+    line-height: 58px;
+    max-width: 200px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
     color: #111 !important;
+    text-align: center;
     font-weight: 500;
-    line-height: 66px;
-    transition: all 0.2s;
 }
-.download:hover {
-    background: rgba(17, 17, 17, 0.75) !important;
-    color: #ffcf0d !important;
+.btn:hover {
+    text-decoration: none;
+}
+
+/*btn_background*/
+.effect01 {
+    color: #111;
+    border: 4px solid#ffcf0d;
+    box-shadow: 0px 0px 0px 1px #ffcf0d inset;
+    background-color: #ffcf0d;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.effect01:hover {
+    border: 4px solid #ffcf0d;
+    background-color: #111;
+    box-shadow: 0px 0px 0px 4px #111 inset;
+}
+
+/*btn_text*/
+.effect01 span {
+    transition: all 0.2s ease-out;
+    z-index: 2;
+}
+.effect01:hover span {
+    letter-spacing: 0.13em;
+    color: #ffcf0d;
+}
+
+/*highlight*/
+.effect01:after {
+    background: #111;
+    border: 0px solid #ffcf0d;
+    content: '';
+    height: 155px;
+    left: -75px;
+    opacity: 0.8;
+    position: absolute;
+    top: -50px;
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+    width: 50px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1); /*easeOutCirc*/
+    z-index: 1;
+}
+.effect01:hover:after {
+    background: #111;
+    border: 20px solid#ffcf0d;
+    opacity: 0;
+    left: 120%;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
 }
 </style>

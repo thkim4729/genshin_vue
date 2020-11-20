@@ -198,6 +198,9 @@
         outline: 0;
         direction: ltr;
         max-height: 130px;
+        p {
+            margin-bottom: 0;
+        }
         div {
             width: 455px;
             text-align: left;

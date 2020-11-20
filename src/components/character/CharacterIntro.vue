@@ -84,7 +84,7 @@
     </div>
 </template>
 
-<script>
+<script defer>
 import { VueAgile } from 'vue-agile';
 export default {
     name: 'CharMain',
