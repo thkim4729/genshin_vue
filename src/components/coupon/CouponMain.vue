@@ -95,6 +95,8 @@ export default {
     width: 1080px;
     height: 490px;
     background: url('../../assets/img/coupon/box.png') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .coupon-form {
     width: 584px;

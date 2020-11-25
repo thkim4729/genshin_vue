@@ -39,11 +39,13 @@ export default {
 }
 .char-bg1 {
     background: url('../assets/img/characterBg01.jpg') no-repeat;
+    background-size: cover;
     animation: breath 80s infinite linear;
     opacity: 1;
 }
 .char-bg2 {
     background: url('../assets/img/characterBg02.jpg') no-repeat;
+    background-size: cover;
     animation: bg-change 15s infinite linear, breath 80s infinite linear;
     opacity: 0;
 }

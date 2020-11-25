@@ -110,7 +110,7 @@ export default {
         background: #fff;
         border-radius: 30px;
         margin-right: 3%;
-        filter: brightness(90%);
+        filter: brightness(95%);
     }
     .Platform-item:hover {
         filter: none;
