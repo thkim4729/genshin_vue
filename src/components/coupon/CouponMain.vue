@@ -148,7 +148,7 @@ export default {
     }
     .info-text {
         padding-right: 24px;
-        height: 300px;
+        height: 250px;
         font-size: 16px;
         line-height: 24px;
         overflow-y: auto;
