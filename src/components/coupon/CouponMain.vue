@@ -15,6 +15,7 @@
                         flat
                         outlined
                         style="width:360px"
+                        :menu-props="{ bottom: true, offsetY: true }"
                     ></v-select>
                 </div>
             </div>
@@ -30,6 +31,7 @@
                         flat
                         outlined
                         style="width:360px"
+                        :menu-props="{ bottom: true, offsetY: true }"
                     ></v-select>
                 </div>
             </div>
