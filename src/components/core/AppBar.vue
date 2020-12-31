@@ -166,7 +166,7 @@ header {
     cursor: pointer;
     font-size: 20px;
     font-weight: 400;
-    line-height: 58px;
+    line-height: 54px;
     max-width: 200px;
     position: relative;
     text-decoration: none;
@@ -175,7 +175,7 @@ header {
     height: 100%;
     color: #111 !important;
     text-align: center;
-    font-weight: 500;
+    font-weight: bold;
 }
 .btn:hover {
     text-decoration: none;

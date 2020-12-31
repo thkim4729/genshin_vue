@@ -81,6 +81,7 @@ export default {
             transition: transform 0.4s 0s ease-out, -webkit-transform 0.4s 0s ease-out;
             img {
                 width: 100%;
+                height: 100%;
             }
         }
         a {
