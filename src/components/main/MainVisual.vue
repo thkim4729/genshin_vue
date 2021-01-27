@@ -110,10 +110,12 @@ export default {
         background: #fff;
         border-radius: 30px;
         margin-right: 3%;
-        filter: brightness(95%);
+        opacity: 0.8;
+        // filter: brightness(75%);
     }
     .Platform-item:hover {
-        filter: none;
+        // filter: none;
+        opacity: 1;
     }
     .Platform-item > a > img {
         text-align: center;
