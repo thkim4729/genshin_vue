@@ -1,34 +1,11 @@
 # genshin_vue
 
 ## Project setup
+
 ```
-npm install
+게임 원신 홈페이지 클론코딩 연습 작업물입니다.
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Source
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://genshin.mihoyo.com/ko/home
