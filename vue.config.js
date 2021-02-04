@@ -1,3 +1,5 @@
 module.exports = {
-  transpileDependencies: ["vuetify"]
+    publicPath: process.env.NODE_ENV === 'production' ? '/genshin_vue/' : '/',
+    outputDir: 'docs',
+    transpileDependencies: ['vuetify'],
 };
