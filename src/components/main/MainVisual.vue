@@ -3,11 +3,11 @@
         <v-row class="visual-wrap" no-gutters justify="center" align="center">
             <video
                 class="video"
-                src="@/assets/video/Genshin.mp4"
+                src="https://genshin.mihoyo.com/_nuxt/videos/3e78e80.mp4"
                 autoplay
                 muted
                 loop
-                poster="@/assets/img/Genshin.jpg"
+                poster="https://genshin.mihoyo.com/_nuxt/img/47f71d4.jpg"
             />
             <v-row class="guide" no-gutters justify="cetner" align="cetner">
                 <p>PS4 /모바일/PC 그랜드 오픈</p>
@@ -37,23 +37,27 @@ export default {
                 {
                     href:
                         'https://store.playstation.com/ko-kr/product/EP6261-CUSA23678_00-OSRELSIEEGENSHIN',
-                    img: require('@/assets/img/ps4.png'),
+                    img:
+                        'https://webstatic-sea.mihoyo.com/upload/event/2020/12/14/49d5113e4e2ab9ae37beb63c6acbc029_8761626118042981173.png',
                     alt: '플레이스테이션4',
                 },
                 {
                     href: 'https://apps.apple.com/kr/app/%EC%9B%90%EC%8B%A0/id1517783697',
-                    img: require('@/assets/img/ios.png'),
+                    img:
+                        'https://webstatic-sea.mihoyo.com/upload/event/2020/12/14/6ff53bc5d797e9efc2ac7b2b602c267a_8295237617862628623.png',
                     alt: '아이폰',
                 },
                 {
                     href: 'https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact',
-                    img: require('@/assets/img/android.png'),
+                    img:
+                        'https://webstatic-sea.mihoyo.com/upload/event/2020/12/14/396b8eb0d0d2f27aadb476e0b62d0926_8878641138830187947.png',
                     alt: '안드로이드',
                 },
                 {
                     href:
                         'https://ys-api-os.mihoyo.com/event/download_porter/link/ys_global/genshinimpactpc/default',
-                    img: require('@/assets/img/windows.png'),
+                    img:
+                        'https://webstatic-sea.mihoyo.com/upload/event/2020/12/14/a27edf5aa048e9509f0850856ad3f403_396608336029707725.png',
                     alt: '윈도우',
                 },
             ],

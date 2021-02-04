@@ -53,10 +53,16 @@
             <v-row class="footer-bottom" justify="center" align="center" no-gutters>
                 <v-row class="footer-left" align="center" no-gutters>
                     <div class="mihoyo-logo">
-                        <img src="@/assets/img/footer/mihoyo.png" alt="미호요로고" />
+                        <img
+                            src="https://uploadstatic-sea.mihoyo.com/hk4e/upload/officialsites/202004/mihoyo_1586770772_9709.png"
+                            alt="미호요로고"
+                        />
                     </div>
                     <div class="genshin-logo">
-                        <img src="@/assets/img/footer/logo.png" alt="원신로고" />
+                        <img
+                            src="https://uploadstatic-sea.mihoyo.com/hk4e/upload/officialsites/202004/GIKR_1587984241_9146.png"
+                            alt="원신로고"
+                        />
                     </div>
                 </v-row>
                 <v-row class="footer-right" align="center" no-gutters>
@@ -74,7 +80,10 @@
                         trademarks of Sony Interactive Entertainment Inc.
                     </div>
                     <div class="content-icon">
-                        <img src="@/assets/img/footer/content-icon.png" alt="게임 등급" />
+                        <img
+                            src="https://webstatic-sea.mihoyo.com/upload/event/2020/12/07/1c815dcb772be24409961e7d94e729c9_3752895997708255975.png"
+                            alt="게임 등급"
+                        />
                     </div>
                 </v-row>
             </v-row>
@@ -153,7 +162,6 @@ export default {
     }
     .genshin-logo {
         position: relative;
-        padding: 0 30px;
     }
 }
 .genshin-logo::after {

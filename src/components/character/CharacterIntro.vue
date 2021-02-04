@@ -151,7 +151,7 @@ li {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('../../assets/img/character/character_pattern1.png') no-repeat;
+    background: url('https://genshin.mihoyo.com/_nuxt/img/6c9d197.png') no-repeat;
     background-position: center bottom;
     background-size: auto 100vh;
 }

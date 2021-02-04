@@ -1,7 +1,7 @@
 <template>
     <div class="news">
         <v-row class="news-wrap" no-gutters justify="center" align="center">
-            <img src="@/assets/img/news.jpg" />
+            <img src="https://genshin.mihoyo.com/_nuxt/img/29770c4.jpg" />
             <h3>소식</h3>
             <v-row class="news-main" no-gutters justify="center" align="center">
                 <div class="news-slide">
@@ -19,11 +19,12 @@
                         <li>
                             <a class="news_item" :href="newsList.link">
                                 <p class="news_title">
-                                    {{
+                                    <!-- {{
                                         isMore
                                             ? newsList.title
                                             : newsList.title.slice(0, 36) + '...'
-                                    }}
+                                    }} -->
+                                    {{ newsList.title }}
                                 </p>
                                 <v-spacer></v-spacer>
                                 <p class="news_date">{{ newsList.date }}</p>
@@ -46,46 +47,46 @@ export default {
             slides: [
                 {
                     src:
-                        'https://uploadstatic-sea.mihoyo.com/contentweb/20201108/2020110811325362131.png',
+                        'https://uploadstatic-sea.mihoyo.com/contentweb/20210203/2021020311562573939.png',
                 },
                 {
                     src:
-                        'https://uploadstatic-sea.mihoyo.com/contentweb/20201111/2020111111125298653.png',
+                        'https://uploadstatic-sea.mihoyo.com/contentweb/20210202/2021020212030855385.png',
                 },
                 {
                     src:
-                        'https://uploadstatic-sea.mihoyo.com/contentweb/20201110/2020111012002678874.png',
+                        'https://uploadstatic-sea.mihoyo.com/contentweb/20210127/2021012712103252965.png',
                 },
                 {
                     src:
-                        'https://uploadstatic-sea.mihoyo.com/contentweb/20201107/2020110721543412021.png',
+                        'https://uploadstatic-sea.mihoyo.com/contentweb/20210125/2021012511571014892.jpg',
                 },
             ],
             newsLists: [
                 {
                     link: '#',
-                    title: '<원신> 데인 여담 - 『타르탈리아』 : 마왕 무장',
-                    date: '2020년 11월 11일',
+                    title: '<원신> 데인 여담 - 「소: 항마대성」',
+                    date: '2021년 2월 3일',
                 },
                 {
                     link: '#',
-                    title: '「다가오는 객성」 1.1 버전 업데이트 안내',
-                    date: '2020년 11월 11일',
+                    title: '1.3 버전 신규 이벤트 알아보기',
+                    date: '2021년 2월 3일',
                 },
                 {
                     link: '#',
-                    title: '<원신> 신규 캐릭터 플레이 - 「타르탈리아: 스네즈나야로 보내는 편지」',
-                    date: '2020년 11월 10일',
+                    title: '「복을 부르는 오색」 이벤트 설명',
+                    date: '2021년 2월 3일',
                 },
                 {
                     link: '#',
-                    title: '「꺼진 별 기행」 이벤트 안내',
-                    date: '2020년 11월 09일',
+                    title: '「밤하늘을 수놓은 등불」 1.3 버전 업데이트 상세안내',
+                    date: '2021년 2월 3일',
                 },
                 {
                     link: '#',
-                    title: '마신 임무 제1장·제3막 「다가오는 객성」 오픈 안내',
-                    date: '2020년 11월 09일',
+                    title: '<원신> 신규 캐릭터 플레이 - 「소(魈): 억겁불제」',
+                    date: '2021년 2월 2일',
                 },
             ],
         };

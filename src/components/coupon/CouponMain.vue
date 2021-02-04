@@ -90,7 +90,7 @@ export default {
     margin: 0 auto;
     width: 1080px;
     height: 490px;
-    background: url('../../assets/img/coupon/box.png') center/cover no-repeat;
+    background: url('https://genshin.mihoyo.com/_nuxt/img/b3d899f.png') center/cover no-repeat;
     background-size: cover;
     background-position: center;
 }

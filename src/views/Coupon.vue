@@ -19,7 +19,7 @@ export default {
 
 <style lang="scss" scoped>
 .coupon {
-    background-image: url('../assets/img/coupon/bg.jpg');
+    background-image: url('https://uploadstatic-sea.mihoyo.com/contentweb/20200924/2020092411570358960.jpg');
     padding: 225px 0 116px;
     background-position: center;
     background-size: cover;

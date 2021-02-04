@@ -38,13 +38,15 @@ export default {
     transform-origin: center;
 }
 .char-bg1 {
-    background: url('../assets/img/characterBg01.jpg') no-repeat;
+    background: url('https://uploadstatic-sea.mihoyo.com/contentweb/20200211/2020021114281584004.jpg')
+        no-repeat;
     background-size: cover;
     animation: breath 80s infinite linear;
     opacity: 1;
 }
 .char-bg2 {
-    background: url('../assets/img/characterBg02.jpg') no-repeat;
+    background: url('https://uploadstatic-sea.mihoyo.com/contentweb/20200211/2020021114281985438.jpg')
+        no-repeat;
     background-size: cover;
     animation: bg-change 15s infinite linear, breath 80s infinite linear;
     opacity: 0;

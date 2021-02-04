@@ -20,7 +20,7 @@
                 </v-list>
             </v-menu>
 
-            <a href="https://forums.mihoyo.com/genshin/" target="_blank">포럼</a>
+            <a href="https://www.hoyolab.com/genshin/" target="_blank">포럼</a>
             <a href="https://webstatic-sea.mihoyo.com/payment/genshin/index.html#/" target="_blank"
                 >상점</a
             >

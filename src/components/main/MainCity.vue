@@ -16,7 +16,10 @@
         <ul class="city-list">
             <li class="city-list-item">
                 <div class="city-list-bg">
-                    <img src="@/assets/img/Soon.jpg" alt="기대해주세요" />
+                    <img
+                        src="https://genshin.mihoyo.com/_nuxt/img/9a62be8.jpg"
+                        alt="기대해주세요"
+                    />
                 </div>
                 <a href="#">
                     <p>기대해주세요</p>
@@ -35,18 +38,22 @@ export default {
                 {
                     id: 0,
                     link: '#',
-                    bgImg: require('@/assets/img/Mondstadt.jpg'),
+                    bgImg:
+                        'https://uploadstatic-sea.mihoyo.com/contentweb/20200211/2020021114275255981.jpg',
                     text: '몬드성',
-                    charImg: require('@/assets/img/Jean.png'),
+                    charImg:
+                        'https://uploadstatic-sea.mihoyo.com/contentweb/20200609/2020060917302873965.png',
                     bgAlt: '몬드성',
                     charAlt: '진',
                 },
                 {
                     id: 1,
                     link: '#',
-                    bgImg: require('@/assets/img/Liyue.jpg'),
+                    bgImg:
+                        'https://uploadstatic-sea.mihoyo.com/contentweb/20200526/2020052612372361982.jpg',
                     text: '리월 항구',
-                    charImg: require('@/assets/img/Xiao.png'),
+                    charImg:
+                        'https://uploadstatic-sea.mihoyo.com/contentweb/20200221/2020022117112223204.png',
                     bgAlt: '리월 항구',
                     charAlt: '소',
                 },
