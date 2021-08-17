@@ -38,7 +38,7 @@ export default {
                     href:
                         'https://store.playstation.com/ko-kr/product/EP6261-CUSA23678_00-OSRELSIEEGENSHIN',
                     img:
-                        'https://webstatic-sea.mihoyo.com/upload/event/2020/12/14/49d5113e4e2ab9ae37beb63c6acbc029_8761626118042981173.png',
+                        'https://webstatic-sea.mihoyo.com/upload/event/2021/04/27/caf1de876b2d79715604463df4187b2f_4939885485338929477.png',
                     alt: '플레이스테이션4',
                 },
                 {

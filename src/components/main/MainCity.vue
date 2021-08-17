@@ -57,6 +57,17 @@ export default {
                     bgAlt: '리월 항구',
                     charAlt: '소',
                 },
+                {
+                    id: 2,
+                    link: '#',
+                    bgImg:
+                        'https://uploadstatic-sea.mihoyo.com/contentweb/20210720/2021072015230536749.jpg',
+                    text: '이나즈마성',
+                    charImg:
+                        'https://uploadstatic-sea.mihoyo.com/contentweb/20210715/2021071515201245150.png',
+                    bgAlt: '이나즈마성',
+                    charAlt: '카미사토 아야카',
+                },
             ],
         };
     },
