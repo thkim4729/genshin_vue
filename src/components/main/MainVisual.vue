@@ -35,8 +35,7 @@ export default {
         return {
             items: [
                 {
-                    href:
-                        'https://store.playstation.com/ko-kr/product/EP6261-CUSA23678_00-OSRELSIEEGENSHIN',
+                    href: 'https://www.playstation.com/ko-kr/games/genshin-impact/',
                     img:
                         'https://webstatic-sea.mihoyo.com/upload/event/2021/04/27/caf1de876b2d79715604463df4187b2f_4939885485338929477.png',
                     alt: '플레이스테이션4',
@@ -108,12 +107,12 @@ export default {
         flex-flow: row;
         justify-content: center;
         align-items: center;
-        min-width: 750px;
+        min-width: 800px;
     }
     .Platform-item {
         background: #fff;
         border-radius: 30px;
-        margin-right: 3%;
+        margin-right: 2%;
         opacity: 0.8;
         // filter: brightness(75%);
     }
