@@ -42,6 +42,7 @@ a {
     font-family: 'NEXON Lv1 Gothic Light', sans-serif;
     vertical-align: middle;
 }
+//
 // ::-webkit-scrollbar {
 //     /* 스크롤바 전체 영역 */
 //     width: 6px;
